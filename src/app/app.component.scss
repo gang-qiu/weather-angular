@@ -1,0 +1,9 @@
+.side-menu__container {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+

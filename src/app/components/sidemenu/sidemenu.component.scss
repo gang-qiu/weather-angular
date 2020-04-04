@@ -50,6 +50,10 @@
   grid-gap: 1rem;
   transition: transform 300ms linear;
   will-change: transform;
+
+  @media only screen and (max-width: 300px) {
+    width: 100%;
+  }
 }
 
 .slide-menu-active {

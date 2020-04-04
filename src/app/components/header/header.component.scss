@@ -1,21 +1,24 @@
-@use "src/global_styles" as global;
+@use "src/styles" as global;
 
 .main__header {
+  @include global.container-padding-sm;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 0.25fr;
+  grid-template-columns: 1fr 1fr 0.35fr;
   grid-template-rows: 1fr;
   box-shadow: 0 0 2rem rgba(0,0,255,0.3);
-  height: 4rem;
   margin: 0;
   align-items: center;
   transition: background-color global.$dark-mode-transition-time;
   animation: 1s ease-in-out 0ms 1 fadein;
 }
 
-.main__header-dark {
-  background-color: #2B244D;
+:host-context(.global-dark-mode) .main__header {
+
+  background-color: black;
   color: white;
+}
+.main__header-dark {
 }
 
 .left__section {

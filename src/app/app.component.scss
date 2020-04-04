@@ -1,9 +1,14 @@
+@use "src/styles" as global;
 
 .root__container {
   width: 100vw;
   height: 100vh;
+  position: relative;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 0.5fr auto;
-  position: relative;
+  grid-template-rows: 0.5fr 20fr 0.5fr;
+}
+
+.global-dark-mode .test {
+  color: red;
 }

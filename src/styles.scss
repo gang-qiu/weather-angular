@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@use "assets/scss/reset";
+
+
+$dark-mode-transition-time: 200ms;
 
 @mixin box-mixin {
   border: 1px solid black;
@@ -12,7 +16,6 @@
   float: right;
 }
 
-$dark-mode-transition-time: 200ms;
 
 @mixin vertical-center-mixin {
   display: flex;
@@ -21,4 +24,12 @@ $dark-mode-transition-time: 200ms;
 
 .vertical-center {
   @include vertical-center-mixin;
+}
+
+@mixin container-padding {
+  padding: 1rem 1.5rem;
+}
+
+@mixin container-padding-sm {
+  padding: 0.1rem 0rem;
 }

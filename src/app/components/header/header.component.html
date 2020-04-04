@@ -30,18 +30,10 @@
 
   <div class="mode-toggle__container">
     <span class="mode-toggle__text">Light</span>
-    <label class="toggle-button__container">
-      <input class="mode-toggle__input"
-        (click)="toggleDarkModeSwitch()"
-        type="checkbox"
-      />
-      <span class="mode-toggle__bg"
-        [ngClass]="{'mode-toggle__bg-checked': stateService.darkModeActive}">
-      </span>
-      <span class="mode-toggle__circle"
-        [ngClass]="{'mode-toggle__circle-checked': stateService.darkModeActive}">
-      </span>
-    </label>
+    <app-radio-switch
+      [isChecked]="stateService.darkModeActive"
+      (click)="toggleDarkModeSwitch()"
+    ></app-radio-switch>
     <span class="mode-toggle__text">Dark</span>
   </div>
 

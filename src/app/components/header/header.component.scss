@@ -4,7 +4,7 @@
   @include global.container-padding-sm;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 0.35fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   box-shadow: 0 0 2rem rgba(0,0,255,0.3);
   background-color: white;
@@ -34,13 +34,15 @@
   letter-spacing: 0.1rem;
   display: inline;
   margin: 0.5rem 0;
+  text-align: center;
 }
 
 .mode-toggle__container {
   display: grid;
+  padding-right: 1rem;
   grid-template-columns: auto;
   grid-template-rows: 1fr 1fr 1fr;
-
+  justify-content: end;
 }
 
 .mode-toggle__text {

@@ -2,7 +2,9 @@
 .toggle-button__container {
   cursor: pointer;
   position: relative;
-  margin: 0 0.5rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
 }
 
 .mode-toggle__input {
@@ -16,7 +18,7 @@
   border-radius: 0.5rem;
   background-color: rgba(0,0,0,0.5);
   display: inline-block;
-  transition: background-color 300ms linear;
+  transition: background-color 200ms;
 }
 
 .mode-toggle__circle {
@@ -24,20 +26,19 @@
   width: 1.3rem;
   background-color: #2B244D;
   position: absolute;
-  top: -0.2rem;
   border-radius: 50%;
   box-shadow: 0 0 0 rgba(0,0,255, 0.5);
-  transition: left 300ms linear;
+  transition: left 200ms, background-color 200ms;
   left: 0.1rem;
 }
 
 .mode-toggle__circle-checked {
   background-color: white;
-  left: 1.75rem;
+  left: 1.5rem;
 }
 
 .mode-toggle__bg-checked {
-  background-color: #FF0070;
+  background-color: #02ff9b;
 }
 
 

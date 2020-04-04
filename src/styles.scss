@@ -7,3 +7,12 @@
 .float-right {
   float: right;
 }
+
+@mixin vertical-center-mixin {
+  display: flex;
+  align-items: center;
+}
+
+.vertical-center {
+  @include vertical-center-mixin;
+}

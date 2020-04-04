@@ -30,6 +30,13 @@
   margin: 0.5rem 0;
 }
 
+.mode-toggle__container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+
 .mode-toggle__text {
   font-size: 0.75rem;
   text-transform: uppercase;

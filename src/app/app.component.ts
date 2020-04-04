@@ -8,8 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'weather-app';
   showMenu = false;
-
-  toggleMenu = () => {
-    this.showMenu = !this.showMenu;
-  }
 }

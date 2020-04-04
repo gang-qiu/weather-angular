@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +6,14 @@ import {Component} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @Input() showMenu = false;
+  @Output() showMenuChange = new EventEmitter<boolean>();
   darkModeActive = false;
+
+  public toggleMenu = () => {
+    this.showMenu = !this.showMenu;
+    this.showMenuChange.emit(this.showMenu);
+  }
 
   public toggleDarkModeSwitch = () => {
     this.darkModeActive = !this.darkModeActive;

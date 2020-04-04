@@ -1,12 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
-.box {
+@mixin box-mixin {
   border: 1px solid black;
+}
+
+.box {
+  @include box-mixin;
 }
 
 .float-right {
   float: right;
 }
+
+$dark-mode-transition-time: 200ms;
 
 @mixin vertical-center-mixin {
   display: flex;

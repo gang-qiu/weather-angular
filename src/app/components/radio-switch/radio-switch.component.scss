@@ -1,10 +1,10 @@
+@use "src/global_styles" as global;
 
 .toggle-button__container {
   cursor: pointer;
   position: relative;
   height: 1.2rem;
-  display: flex;
-  align-items: center;
+  @include global.vertical-center-mixin;
 }
 
 .mode-toggle__input {
@@ -18,7 +18,7 @@
   border-radius: 0.5rem;
   background-color: rgba(0,0,0,0.5);
   display: inline-block;
-  transition: background-color 200ms;
+  transition: background-color global.$dark-mode-transition-time;
 }
 
 .mode-toggle__circle {
@@ -28,7 +28,8 @@
   position: absolute;
   border-radius: 50%;
   box-shadow: 0 0 0 rgba(0,0,255, 0.5);
-  transition: left 200ms, background-color 200ms;
+  transition: left global.$dark-mode-transition-time,
+              background-color global.$dark-mode-transition-time;
   left: 0.1rem;
 }
 

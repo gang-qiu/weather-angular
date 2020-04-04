@@ -1,3 +1,5 @@
+@use "src/global_styles" as global;
+
 .main__header {
   width: 100%;
   display: grid;
@@ -7,7 +9,7 @@
   height: 4rem;
   margin: 0;
   align-items: center;
-  transition: background-color 500ms linear;
+  transition: background-color global.$dark-mode-transition-time;
   animation: 1s ease-in-out 0ms 1 fadein;
 }
 
@@ -46,11 +48,15 @@
 /*SVGs*/
 .hamburger__icon {
   position: relative;
-  z-index: 35;
   height: 1rem;
   padding: 0.5rem 1.5rem;
   margin-right: 1rem;
   cursor: pointer;
+  fill: #2B244D;
+}
+
+.hamburger__icon-dark {
+  fill: #ffffff;
 }
 
 .logo__icon {
@@ -66,11 +72,4 @@
   fill: #ffff;
 }
 
-.hamburger__icon__fill {
-  fill: #2B244D;
-}
-
-.hamburger__icon__fill-dark {
-  fill: #ffff;
-}
 

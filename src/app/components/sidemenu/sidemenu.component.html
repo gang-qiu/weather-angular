@@ -1,11 +1,11 @@
 <!--Slide Menu-->
 <aside class="side-menu__container"
-  [ngClass]="{'side-menu__container-active':showMenu}"
+  [ngClass]="{'side-menu__container-active': stateService.showSideMenu}"
   (click)="toggleMenu()"
 >
 
   <nav class="slide-menu"
-    [ngClass]="{'slide-menu-active': showMenu}"
+    [ngClass]="{'slide-menu-active': stateService.showSideMenu}"
     (click)="$event.stopImmediatePropagation()"
   >
     <section class="menu-header box">

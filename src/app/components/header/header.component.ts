@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { StateService } from '../../services/state.service';
 
 @Component({
   selector: 'app-header',
@@ -6,16 +7,17 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Input() showMenu = false;
-  @Output() showMenuChange = new EventEmitter<boolean>();
-  darkModeActive = false;
+  stateService: StateService = null;
+
+  constructor(stateService: StateService) {
+    this.stateService = stateService;
+  }
 
   public toggleMenu = () => {
-    this.showMenu = !this.showMenu;
-    this.showMenuChange.emit(this.showMenu);
+    this.stateService.showSideMenu = !this.stateService.showSideMenu;
   }
 
   public toggleDarkModeSwitch = () => {
-    this.darkModeActive = !this.darkModeActive;
+    this.stateService.darkModeActive = !this.stateService.darkModeActive;
   }
 }

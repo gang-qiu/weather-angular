@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component} from '@angular/core';
+import { StateService } from '../../services/state.service';
 
 @Component({
   selector: 'app-sidemenu',
@@ -6,11 +7,13 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./sidemenu.component.scss']
 })
 export class SidemenuComponent {
-  @Input() showMenu: boolean;
-  @Output() showMenuChange = new EventEmitter<boolean>();
+  stateService: StateService;
+
+  constructor(stateService: StateService) {
+    this.stateService = stateService;
+  }
 
   public toggleMenu = () => {
-    this.showMenu = !this.showMenu;
-    this.showMenuChange.emit(this.showMenu);
+    this.stateService.showSideMenu = !this.stateService.showSideMenu;
   }
 }

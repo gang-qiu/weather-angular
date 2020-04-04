@@ -2,14 +2,7 @@
 
 .main__container {
   @include global.container-padding;
-  background-color: lightblue;
   position: relative;
   transition: background-color global.$dark-mode-transition-time,
               color global.$dark-mode-transition-time;
 }
-
-:host-context(.global-dark-mode) .main__container {
-    color: white;
-    background-color: #2B244D;
-}
-

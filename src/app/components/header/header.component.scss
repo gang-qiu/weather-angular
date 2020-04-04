@@ -7,6 +7,7 @@
   grid-template-columns: 1fr 1fr 0.35fr;
   grid-template-rows: 1fr;
   box-shadow: 0 0 2rem rgba(0,0,255,0.3);
+  background-color: white;
   margin: 0;
   align-items: center;
   transition: background-color global.$dark-mode-transition-time;

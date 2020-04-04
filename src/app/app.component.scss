@@ -7,8 +7,12 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 0.5fr 20fr 0.5fr;
+  background-color: #00FF9B;
+  transition: background-color global.$dark-mode-transition-time,
+              color global.$dark-mode-transition-time;
 }
 
-.global-dark-mode .test {
-  color: red;
+.global-dark-mode.root__container {
+  color: white;
+  background-color: #2B244D;
 }

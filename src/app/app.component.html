@@ -1,11 +1,13 @@
 
 <app-sidemenu [(showMenu)]="showMenu"></app-sidemenu>
 
-<section class="root__container">
-  <button (click)="toggleMenu()">
-    Butt on
-  </button>
-  <p style="text-align: right;">
-    {{showMenu | json}}
-  </p>
-</section>
+<div class="root__container">
+  <app-header></app-header>
+<!--  <button (click)="toggleMenu()">-->
+<!--    Butt on-->
+<!--  </button>-->
+<!--  <p style="text-align: right;">-->
+<!--    {{showMenu | json}}-->
+<!--  </p>-->
+</div>
+

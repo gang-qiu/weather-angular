@@ -6,6 +6,8 @@ import { RadioSwitchComponent } from './radio-switch/radio-switch.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { RouterModule } from '@angular/router';
+import { WeatherCardComponent } from './weather-card/weather-card.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -13,14 +15,18 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     RadioSwitchComponent,
     FooterComponent,
-    BodyComponent
+    BodyComponent,
+    WeatherCardComponent,
+    HomeComponent
   ],
   exports: [
     SidemenuComponent,
     HeaderComponent,
     RadioSwitchComponent,
     FooterComponent,
-    BodyComponent
+    BodyComponent,
+    WeatherCardComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

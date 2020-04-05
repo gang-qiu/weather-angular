@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 import { HomeComponent } from './home/home.component';
 import { WeatherIconsComponent } from './weather-icons/weather-icons.component';
+import { TriangleArrowComponent } from './triangle-arrow/triangle-arrow.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WeatherIconsComponent } from './weather-icons/weather-icons.component';
     BodyComponent,
     WeatherCardComponent,
     HomeComponent,
-    WeatherIconsComponent
+    WeatherIconsComponent,
+    TriangleArrowComponent
   ],
   exports: [
     SidemenuComponent,

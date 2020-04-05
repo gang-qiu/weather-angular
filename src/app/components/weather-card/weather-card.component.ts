@@ -9,8 +9,12 @@ import { WeatherCondition } from '../weather-icons/weather-icons.component';
 export class WeatherCardComponent {
 
   public weatherCondition: WeatherCondition;
+  public currentTemp: number;
+  public minTemp: number;
+  public maxTemp: number;
 
   constructor() {
     this.weatherCondition = 'clouds';
+    this.currentTemp = 90;
   }
 }

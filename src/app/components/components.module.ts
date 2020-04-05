@@ -8,6 +8,7 @@ import { BodyComponent } from './body/body.component';
 import { RouterModule } from '@angular/router';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 import { HomeComponent } from './home/home.component';
+import { WeatherIconsComponent } from './weather-icons/weather-icons.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     BodyComponent,
     WeatherCardComponent,
-    HomeComponent
+    HomeComponent,
+    WeatherIconsComponent
   ],
   exports: [
     SidemenuComponent,
@@ -26,7 +28,8 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     BodyComponent,
     WeatherCardComponent,
-    HomeComponent
+    HomeComponent,
+    WeatherIconsComponent
   ],
   imports: [
     CommonModule,

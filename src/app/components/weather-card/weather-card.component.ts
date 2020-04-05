@@ -7,7 +7,6 @@ import { WeatherCondition } from '../weather-icons/weather-icons.component';
   styleUrls: ['./weather-card.component.scss']
 })
 export class WeatherCardComponent {
-
   public weatherCondition: WeatherCondition;
   public currentTemp: number;
   public minTemp: number;
@@ -16,5 +15,7 @@ export class WeatherCardComponent {
   constructor() {
     this.weatherCondition = 'clouds';
     this.currentTemp = 90;
+    this.minTemp = 40;
+    this.maxTemp = 95;
   }
 }

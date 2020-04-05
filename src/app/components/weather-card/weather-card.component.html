@@ -1,11 +1,13 @@
 <section class="weather__card" >
-  <span class="city-name__text">Paris</span>
-  <app-weather-icons [condition]="weatherCondition"></app-weather-icons>
+  <div class="icon__container">
+    <p class="city-name__text">Paris</p>
+    <app-weather-icons [condition]="weatherCondition"></app-weather-icons>
+  </div>
 
   <div class="temperature-text__container">
     <span class="temperature__text">{{ currentTemp }}</span>
     <span class="temperature-metric__text">°</span>
-    <span class="weather-condition__text">{{ weatherCondition }}</span>
+    <p class="weather-condition__text">{{ weatherCondition }}</p>
   </div>
 
   <section class="min-max__container">

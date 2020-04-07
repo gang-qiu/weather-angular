@@ -1,0 +1,50 @@
+@use "src/styles" as global;
+
+.add__card {
+  background-color: white;
+  box-shadow: 0 0 2rem rgba(0,0,255, 0.1);
+
+  padding: 1rem;
+  margin: 1rem;
+  width: 19rem;
+  height: 30rem;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 1.75rem;
+  animation: 1.25s ease-in-out 0ms 1 fadein;
+  color: #443282;
+  transition: background-color global.$dark-mode-transition-time;
+
+  &.dark-mode {
+    background-color: #0c1066;
+    color: white;
+  }
+}
+
+.card__title {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+}
+
+.header__container {
+  text-align: center;
+}
+
+.body__container {
+  align-self: end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.add__icon {
+  width: 10rem;
+  margin: 0 auto;
+}
+
+.city__illustration {
+  width: 17rem;
+  margin: 0 auto;
+}

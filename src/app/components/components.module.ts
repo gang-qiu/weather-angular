@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { WeatherIconsComponent } from './weather-icons/weather-icons.component';
 import { TriangleArrowComponent } from './triangle-arrow/triangle-arrow.component';
 import { AddWeatherCardComponent } from './add-weather-card/add-weather-card.component';
+import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AddWeatherCardComponent } from './add-weather-card/add-weather-card.com
     HomeComponent,
     WeatherIconsComponent,
     TriangleArrowComponent,
-    AddWeatherCardComponent
+    AddWeatherCardComponent,
+    WeatherDetailsComponent
   ],
   exports: [
     SidemenuComponent,

@@ -1,4 +1,4 @@
-
+@use "src/styles" as global;
 
 .weather__card {
   display: grid;
@@ -12,6 +12,13 @@
   background-color: white;
   border-radius: 1.75rem;
   animation: 1.25s ease-in-out 0ms 1 fadein;
+  transition: background-color global.$dark-mode-transition-time,
+              color, global.$dark-mode-transition-time;
+}
+
+:host-context(.global-dark-mode) .weather__card {
+  background-color: #0c1066;
+  color: white;
 }
 
 .city-name__text {
@@ -62,13 +69,8 @@
   text-align: center;
 }
 
-.min-arrow__icon-container, .max-arrow__icon {
-  height: 1.25rem;
-  margin: auto;
-}
-
 .max-arrow__icon {
-  margin-bottom: -0.05rem;
+  transform: translateY(1rem);
 }
 
 .max__text {

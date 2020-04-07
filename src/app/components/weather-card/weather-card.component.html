@@ -17,7 +17,9 @@
       <span class="min__text">Min</span>
     </div>
     <div class="max__container">
-      <app-triangle-arrow [arrowDirection]="'down'"></app-triangle-arrow>
+      <div class="max-arrow__icon">
+        <app-triangle-arrow [arrowDirection]="'down'"></app-triangle-arrow>
+      </div>
       <span class="max-temperature__text">{{ maxTemp }}</span>
       <span class="max__text">Max</span>
     </div>

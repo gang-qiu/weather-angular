@@ -12,6 +12,8 @@ import { WeatherIconsComponent } from './weather-icons/weather-icons.component';
 import { TriangleArrowComponent } from './triangle-arrow/triangle-arrow.component';
 import { AddWeatherCardComponent } from './add-weather-card/add-weather-card.component';
 import { WeatherDetailsComponent } from './weather-details/weather-details.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { WeatherDetailsComponent } from './weather-details/weather-details.compo
     WeatherIconsComponent,
     TriangleArrowComponent,
     AddWeatherCardComponent,
-    WeatherDetailsComponent
+    WeatherDetailsComponent,
   ],
   exports: [
     SidemenuComponent,
@@ -39,7 +41,12 @@ import { WeatherDetailsComponent } from './weather-details/weather-details.compo
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    HttpClientModule,
   ],
+  providers: [
+    HttpClientModule,
+  ]
 })
 export class ComponentsModule { }

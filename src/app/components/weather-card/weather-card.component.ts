@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { WeatherCondition } from '../weather-icons/weather-icons.component';
+import { Component, Input } from '@angular/core';
 import { CityWeatherModel } from '../../models/city-weather/city-weather.model';
 
 @Component({
@@ -8,9 +7,5 @@ import { CityWeatherModel } from '../../models/city-weather/city-weather.model';
   styleUrls: ['./weather-card.component.scss']
 })
 export class WeatherCardComponent {
-  public cityWeatherModel: CityWeatherModel;
-
-  constructor(cityWeatherModel: CityWeatherModel) {
-    this.cityWeatherModel = cityWeatherModel;
-  }
+  @Input() cityWeatherModel: CityWeatherModel;
 }

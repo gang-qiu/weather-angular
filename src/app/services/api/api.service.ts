@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CityWeatherModel } from '../../models/city-weather/city-weather.model';
-import { Subject } from 'rxjs';
 
 const OPEN_WEATHER_MAP_API_KEY = '6a229404215b40606483ced33611e29d';
 const OPEN_WEATHER_MAP_BASE_URL = 'http://api.openweathermap.org/data/2.5/weather';
@@ -17,14 +16,14 @@ export class ApiService {
   }
 
   public getCurrentWeather(city: string): Promise<CityWeatherModel> {
-    const url = OPEN_WEATHER_MAP_API_KEY + `?q=${city}&APPID=${OPEN_WEATHER_MAP_API_KEY}`;
+    const url = OPEN_WEATHER_MAP_BASE_URL + `?q=${city}&APPID=${OPEN_WEATHER_MAP_API_KEY}`;
     return new Promise((resolve, reject) => {
       this.http.get<any>(url).subscribe(data => {
           resolve(new CityWeatherModel({
             cityName: data.name,
             maxTemp: data.main.temp_max,
             minTemp: data.main.temp_min,
-            weatherCondition: data.wather.main.toLowerCase(),
+            weatherCondition: data.weather[0].main.toLowerCase(),
             currentTemp: data.main.temp,
           }));
         }, err => {

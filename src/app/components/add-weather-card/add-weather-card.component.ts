@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { StateService } from '../../services/state.service';
 
 @Component({
@@ -6,9 +6,11 @@ import { StateService } from '../../services/state.service';
   templateUrl: './add-weather-card.component.html',
   styleUrls: ['./add-weather-card.component.scss']
 })
-export class AddWeatherCardComponent implements OnInit {
-
+export class AddWeatherCardComponent {
+  public isAddingCity: boolean;
   public stateService: StateService;
+  public newCityName: string;
+  @Output() addNewCity: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(
     stateService: StateService
@@ -16,7 +18,14 @@ export class AddWeatherCardComponent implements OnInit {
     this.stateService = stateService;
   }
 
-  ngOnInit(): void {
+  public onClickAddCity() {
+    this.isAddingCity = !this.isAddingCity;
+  }
+
+  public addCity() {
+    this.addNewCity.emit(this.newCityName);
+    this.newCityName = null;
+    this.isAddingCity = false;
   }
 
 }

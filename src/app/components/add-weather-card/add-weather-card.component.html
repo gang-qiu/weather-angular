@@ -1,13 +1,22 @@
 <div class="add__card"
      [ngClass]="stateService.darkModeActive && 'dark-mode'"
-     routerLink="/add"
 >
   <div class="header__container">
     <span class="card__title">Add city</span>
   </div>
 
   <div class="body__container">
-    <svg class="add__icon" id="Plus_Icon" data-name="Plus Icon" viewBox="1454.4 326.4 209.1 209.1">
+    <form *ngIf="isAddingCity" (ngSubmit)="addCity()">
+      <input type="text" [(ngModel)]="newCityName" name="name"/>
+    </form>
+
+    <svg class="add__icon"
+         id="Plus_Icon"
+         data-name="Plus Icon"
+         viewBox="1454.4 326.4 209.1 209.1"
+         *ngIf="!isAddingCity"
+         (click)="onClickAddCity()"
+    >
         <defs>
           <style>
             .cls-299{fill:#7effcc}

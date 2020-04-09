@@ -5,7 +5,7 @@
   </div>
 
   <div class="temperature-text__container">
-    <span class="temperature__text">{{ cityWeatherModel.currentTemp }}</span>
+    <span class="temperature__text">{{ cityWeatherModel.currentTemp | number: '1.0-0' }}</span>
     <span class="temperature-metric__text">°</span>
     <p class="weather-condition__text">{{ cityWeatherModel.weatherCondition }}</p>
   </div>
@@ -13,14 +13,14 @@
   <section class="min-max__container">
     <div class="min__container">
       <app-triangle-arrow [arrowDirection]="'up'"></app-triangle-arrow>
-      <span class="min-temperature__text">{{ cityWeatherModel.minTemp }}</span>
+      <span class="min-temperature__text">{{ cityWeatherModel.minTemp | number: '1.0-0'}}</span>
       <span class="min__text">Min</span>
     </div>
     <div class="max__container">
       <div class="max-arrow__icon">
         <app-triangle-arrow [arrowDirection]="'down'"></app-triangle-arrow>
       </div>
-      <span class="max-temperature__text">{{ cityWeatherModel.maxTemp }}</span>
+      <span class="max-temperature__text">{{ cityWeatherModel.maxTemp | number: '1.0-0'}}</span>
       <span class="max__text">Max</span>
     </div>
   </section>

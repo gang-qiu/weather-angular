@@ -1,26 +1,26 @@
 <section class="weather__card" >
   <div class="icon__container">
-    <p class="city-name__text">Paris</p>
-    <app-weather-icons [condition]="weatherCondition"></app-weather-icons>
+    <p class="city-name__text">{{cityWeatherModel.cityName}}</p>
+    <app-weather-icons [condition]="cityWeatherModel.weatherCondition"></app-weather-icons>
   </div>
 
   <div class="temperature-text__container">
-    <span class="temperature__text">{{ currentTemp }}</span>
+    <span class="temperature__text">{{ cityWeatherModel.currentTemp }}</span>
     <span class="temperature-metric__text">°</span>
-    <p class="weather-condition__text">{{ weatherCondition }}</p>
+    <p class="weather-condition__text">{{ cityWeatherModel.weatherCondition }}</p>
   </div>
 
   <section class="min-max__container">
     <div class="min__container">
       <app-triangle-arrow [arrowDirection]="'up'"></app-triangle-arrow>
-      <span class="min-temperature__text">{{ minTemp }}</span>
+      <span class="min-temperature__text">{{ cityWeatherModel.minTemp }}</span>
       <span class="min__text">Min</span>
     </div>
     <div class="max__container">
       <div class="max-arrow__icon">
         <app-triangle-arrow [arrowDirection]="'down'"></app-triangle-arrow>
       </div>
-      <span class="max-temperature__text">{{ maxTemp }}</span>
+      <span class="max-temperature__text">{{ cityWeatherModel.maxTemp }}</span>
       <span class="max__text">Max</span>
     </div>
   </section>

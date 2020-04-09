@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WeatherCondition } from '../weather-icons/weather-icons.component';
+import { CityWeatherModel } from '../../models/city-weather/city-weather.model';
 
 @Component({
   selector: 'app-weather-card',
@@ -7,15 +8,9 @@ import { WeatherCondition } from '../weather-icons/weather-icons.component';
   styleUrls: ['./weather-card.component.scss']
 })
 export class WeatherCardComponent {
-  public weatherCondition: WeatherCondition;
-  public currentTemp: number;
-  public minTemp: number;
-  public maxTemp: number;
+  public cityWeatherModel: CityWeatherModel;
 
-  constructor() {
-    this.weatherCondition = 'clouds';
-    this.currentTemp = 90;
-    this.minTemp = 40;
-    this.maxTemp = 95;
+  constructor(cityWeatherModel: CityWeatherModel) {
+    this.cityWeatherModel = cityWeatherModel;
   }
 }

@@ -8,5 +8,5 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class RadioSwitchComponent {
   @Input() isCheckedByDefault = false;
   @Input() isChecked: boolean = this.isCheckedByDefault;
-  @Output() click = new EventEmitter<void>();
+  @Output() clickEvent = new EventEmitter<void>();
 }
